@@ -4,5 +4,4 @@ data class AyahPair(
     val number: Int,
     val arab: String,
     val translation: String
-
 )

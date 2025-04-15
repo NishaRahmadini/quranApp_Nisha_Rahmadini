@@ -14,4 +14,5 @@ interface ApiService {
 
     @GET("surah/{number}/editions/quran-simple,id.indonesian")
     suspend fun getSurahDetail(@Path("number") number: Int): MultiEditionResponse
+
 }

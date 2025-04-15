@@ -10,7 +10,6 @@ import kotlinx.coroutines.launch
 
 class DetailViewModel : ViewModel() {
 
-
     private val _ayahList = MutableStateFlow<List<AyahPair>>(emptyList())
     val ayahList: StateFlow<List<AyahPair>> = _ayahList
 
@@ -35,7 +34,7 @@ class DetailViewModel : ViewModel() {
 
                     AyahPair(
                         number = arabAyah.numberInSurah,
-                        arab = "﴾${arabAyah.text} ﴿$arabNumber", // tampilkan angka arab di akhir ayat
+                        arab = " \u2067﴿$arabNumber﴾\u2069 ${arabAyah.text} ",
                         translation = indo?.text ?: ""
                     )
                 }
